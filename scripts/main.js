@@ -13,10 +13,19 @@ if ( navigator.vibrate ) {
 		var offtime = DUTY_CYCLE - onTime;
 		navigator.vibrate( [onTime, offTime] );
 	};
-	//  start "vibrating" at 0 power:
-	window.vibes = setInterval( vibe( 0 ), DUTY_CYCLE );
 
+	//  set a vibe level to repeat at.
+	window.setVibes = function( power ) {
+		window.vibes = setInterval( vibe( power ), DUTY_CYCLE );
+	};
 
+	//  stop vibing.
+	window.killTheVibes = function() {
+		clearInterval( window.vibes );
+	};
+
+	//  start vibing at 0 power:
+	setVibes( 0 );
 
 } else {
 	alert( "you can not vibrate" );
