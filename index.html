@@ -40,9 +40,10 @@
 						var heightOffset = zeroZone.offsetHeight;
 						var height = totalHeight - heightOffset;
 						console.log("heights:" + totalHeight + ", " + heightOffset + ", " + height + "y_pos: " + y_pos);
-						var percentage = Math.round(Math.max(height - y_pos, 0) / (heightOffset + height) * 100) + "%";
-						console.log("percentage: " + percentage);
-						slider.style.bottom = percentage;
+						var percentage = Math.round(Math.max(height - y_pos, 0) / (heightOffset + height) * 100);
+						var blah = document.getElementById("desktopWarning");
+						blah.innerHTML = "percentage: " + percentage + "%";
+						slider.style.bottom = percentage + "%";
 						window.setVibes(percentage);
 						//Check if we're getting to the bounds of the screen and stop tracking
 						if (y_pos < 10 || y_pos > totalHeight - 10 || x_pos < 10 | x_pos > totalWidth - 10) {
