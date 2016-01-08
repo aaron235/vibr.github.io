@@ -9,8 +9,14 @@ if ( navigator.vibrate ) {
 
 	//  vibe the vibes. accepts a power level from 0 to 100.
 	vibe = function( power ) {
+		if ( power < 0 || power > 100 ) {
+			alert( "fuck you" );
+		} else if ( power < 10 ) {
+			power = 10;
+		}
+
 		var onTime  = ( power / 100 ) * DUTY_CYCLE;
-		var offtime = DUTY_CYCLE - onTime;
+		var offTime = DUTY_CYCLE - onTime;
 		navigator.vibrate( [onTime, offTime] );
 	};
 
