@@ -31,7 +31,6 @@
 				function move(event) {
 					event.preventDefault();
 					if (selected) {
-						//console.log("window.event.clientX:" + window.event.clientX + " event.clientX:" + event.clientX + " event.touches[0].pageX:" + event.touches[0].pageX);
 						x_pos = event.clientX || event.touches[0].pageX;
 						y_pos = event.clientY || event.touches[0].pageY;
 						var totalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -39,12 +38,12 @@
 						var totalHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 						var heightOffset = zeroZone.offsetHeight;
 						var height = totalHeight - heightOffset;
-						console.log("heights:" + totalHeight + ", " + heightOffset + ", " + height + "y_pos: " + y_pos);
 						var percentage = Math.round(Math.max(height - y_pos, 0) / (heightOffset + height) * 100);
 						var blah = document.getElementById("desktopWarning");
 						blah.innerHTML = "percentage: " + percentage + "%";
 						slider.style.bottom = percentage + "%";
 						window.setVibes(percentage);
+						
 						//Check if we're getting to the bounds of the screen and stop tracking
 						if (y_pos < 10 || y_pos > totalHeight - 10 || x_pos < 10 | x_pos > totalWidth - 10) {
 							selected = false;
