@@ -20,7 +20,7 @@
 				sliderArea.addEventListener("mousedown", function(event) {init(event);}, false);
 				sliderArea.addEventListener("touchmove", function(event) {move(event);}, false);
 				sliderArea.addEventListener("mousemove", function(event) {move(event);}, false);
-				sliderArea.addEventListener("toucheend", function(event) {end(event);}, false);
+				sliderArea.addEventListener("touchend", function(event) {end(event);}, false);
 				sliderArea.addEventListener("mouseup", function(event) {end(event);}, false);
 
 				function init(event) {
@@ -43,7 +43,7 @@
 						blah.innerHTML = "percentage: " + percentage + "%";
 						slider.style.bottom = percentage + "%";
 						window.setVibes(percentage);
-						
+
 						//Check if we're getting to the bounds of the screen and stop tracking
 						if (y_pos < 10 || y_pos > totalHeight - 10 || x_pos < 10 | x_pos > totalWidth - 10) {
 							selected = false;
