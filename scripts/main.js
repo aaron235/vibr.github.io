@@ -6,15 +6,13 @@ navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mo
 
 navigator.vibrate( 1000 );
 
-alert( navigator.vibrate );
-
 if ( navigator.vibrate ) {
 	//  we're on a good platform!
 
 	//  vibe the vibes. accepts a power level from 0 to 100.
 	vibe = function( power ) {
 		if ( power < 0 || power > 100 ) {
-			alert( "fuck you" );
+			console.log( "value out of range" );
 		} else if ( power < 10 ) {
 			power = 10;
 		}
@@ -39,7 +37,6 @@ if ( navigator.vibrate ) {
 
 } else {
 	//  fade in the no-vibe div
-	console.log( "THIS DOESN'T HAVE A VIBRATOR FUCK YOU" );
 	var elStyle = document.getElementById( 'desktopWarning' ).style;
 	elStyle.display = '';
 	//  elStyle.opacity = 0;
