@@ -16,12 +16,12 @@
 				var sliderArea = document.querySelector("body");
 				var slider = document.querySelector("#slider");
 				var zeroZone = document.querySelector("header");
-				sliderArea.addEventListener("touchstart", init);
-				sliderArea.addEventListener("mousedown", init);
-				sliderArea.addEventListener("touchmove", move);
-				sliderArea.addEventListener("mousemove", move);
-				sliderArea.addEventListener("toucheend", end);
-				sliderArea.addEventListener("mouseup", end);
+				sliderArea.addEventListener("touchstart", function(event) {init(event);}, false);
+				sliderArea.addEventListener("mousedown", function(event) {init(event);}, false);
+				sliderArea.addEventListener("touchmove", function(event) {move(event);}, false);
+				sliderArea.addEventListener("mousemove", function(event) {move(event);}, false);
+				sliderArea.addEventListener("toucheend", function(event) {end(event);}, false);
+				sliderArea.addEventListener("mouseup", function(event) {end(event);}, false);
 
 				function init(event) {
 					event.preventDefault();
@@ -31,7 +31,7 @@
 				function move(event) {
 					event.preventDefault();
 					if (selected) {
-						console.log("window.event.clientX:" + window.event.clientX + " event.clientX:" + event.clientX + " event.touches[0].pageX:" + event.touches[0].pageX);
+						//console.log("window.event.clientX:" + window.event.clientX + " event.clientX:" + event.clientX + " event.touches[0].pageX:" + event.touches[0].pageX);
 						x_pos = window.event.clientX || event.clientX || event.touches[0].pageX;
 						y_pos = window.event.clientY || event.clientY || event.touches[0].pageY;
 						var totalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
