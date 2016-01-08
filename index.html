@@ -32,8 +32,8 @@
 					event.preventDefault();
 					if (selected) {
 						//console.log("window.event.clientX:" + window.event.clientX + " event.clientX:" + event.clientX + " event.touches[0].pageX:" + event.touches[0].pageX);
-						x_pos = window.event.clientX || event.clientX || event.touches[0].pageX;
-						y_pos = window.event.clientY || event.clientY || event.touches[0].pageY;
+						x_pos = event.clientX || event.touches[0].pageX;
+						y_pos = event.clientY || event.touches[0].pageY;
 						var totalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
 						var totalHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
