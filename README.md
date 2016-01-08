@@ -1,2 +1,2 @@
-# viberr
+# vibr
 A web vibrator.
