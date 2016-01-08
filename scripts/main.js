@@ -28,5 +28,6 @@ if ( navigator.vibrate ) {
 	setVibes( 0 );
 
 } else {
-	alert( "you can not vibrate" );
+	//  fade in the no-vibe div
+	var s = document.getElementById('thing').style; s.opacity = 1; (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
 }

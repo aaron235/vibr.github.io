@@ -2,6 +2,10 @@
 
 <html>
 	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+
 		<title>Viberr</title>
 		<link rel="stylesheet" href="styles/main.css" type="text/css" />
 		<script src="scripts/main.js"></script>
@@ -18,17 +22,17 @@
 				sliderArea.addEventListener("mousemove", move);
 				sliderArea.addEventListener("toucheend", end);
 				sliderArea.addEventListener("mouseup", end);
-				
+
 				function init(event) {
 					event.preventDefault();
 					selected = true;
 				}
-				
+
 				function move(event) {
 					event.preventDefault();
 					if (selected) {
-						x_pos = window.event.clientX | event.clientX;	
-						y_pos = window.event.clientY | event.clientY;	
+						x_pos = window.event.clientX || event.clientX;
+						y_pos = window.event.clientY || event.clientY;
 						var totalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
 						var totalHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -44,13 +48,13 @@
 						}
 					}
 				}
-				
+
 				function end(event) {
 					event.preventDefault();
 					selected = false;
 				}
 			}
-			
+
 		</script>
 	</head>
 	<body>
