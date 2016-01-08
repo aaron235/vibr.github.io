@@ -27,8 +27,8 @@
 				function move(event) {
 					event.preventDefault();
 					if (selected) {
-						x_pos = window.event.clientX;	
-						y_pos = window.event.clientY;	
+						x_pos = window.event.clientX | event.clientX;	
+						y_pos = window.event.clientY | event.clientY;	
 						var totalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
 						var totalHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
