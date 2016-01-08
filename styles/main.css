@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+body {
+	min-width: 320px;
+	height: 100%;
+	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	color: white;
+	font-size: 2rem;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	background: #f857a6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(#ff5858, #f857a6); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(#ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+	position: fixed;
+	bottom: 0px;
+	display: block;
+	width: 100%;
+	border-top: 2px solid white;
+	height: 5rem;
+	line-height: 5rem;
+	padding-left: 1rem;
+}
+
+#sliderArea {
+	color: transparent;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+#slider {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 5rem;
+	background: white;
+	margin: 0 auto;
+	margin-bottom: 2.5rem;
+	left: 50%;
+	margin-left: -2.5rem;
+	position: absolute;
+	bottom: 0%;
+}
