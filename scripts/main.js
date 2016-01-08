@@ -4,7 +4,9 @@ var DUTY_CYCLE = 50;
 //  Here, we set the navigator's vibrate object so that it is consistent:
 navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
-console.log( navigator.vibrate );
+navigator.vibrate( 1000 );
+
+alert( navigator.vibrate );
 
 if ( navigator.vibrate ) {
 	//  we're on a good platform!
@@ -19,7 +21,9 @@ if ( navigator.vibrate ) {
 
 		var onTime  = ( power / 100 ) * DUTY_CYCLE;
 		var offTime = DUTY_CYCLE - onTime;
-		navigator.vibrate( [onTime, offTime] );
+		navigator.vibrate( onTime );
+		navigator.vibrate( offTime );
+
 	};
 
 	//  set a vibe level to repeat at.
