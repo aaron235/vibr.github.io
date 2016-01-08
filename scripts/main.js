@@ -4,6 +4,8 @@ var DUTY_CYCLE = 50;
 //  Here, we set the navigator's vibrate object so that it is consistent:
 navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
+console.log( navigator.vibrate );
+
 if ( navigator.vibrate ) {
 	//  we're on a good platform!
 
