@@ -20,15 +20,13 @@ if ( navigator.vibrate ) {
 		}
 
 		var onTime  = ( power / 100 ) * DUTY_CYCLE;
-		var offTime = DUTY_CYCLE - onTime;
 		navigator.vibrate( onTime );
-		navigator.vibrate( offTime );
 
 	};
 
 	//  set a vibe level to repeat at.
 	window.setVibes = function( power ) {
-		window.vibes = setInterval( vibe( power ), DUTY_CYCLE );
+		window.vibes = setInterval( function() { vibe( power ) }, DUTY_CYCLE );
 	};
 
 	//  stop vibing.
