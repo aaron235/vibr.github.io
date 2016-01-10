@@ -49,11 +49,16 @@ header {
 	bottom: 0%;
 }
 
-#desktopWarning {
+.warning {
 	display: none;
 	text-align: center;
 	width: 100%;
 	height: 100%;
 	top: 40%;
 	position: absolute;
+	padding: 0rem 5rem;
+}
+
+#desktopWarning {
+	display: block;
 }
