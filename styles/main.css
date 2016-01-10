@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:600);
+
 * {
 	box-sizing: border-box;
 }
@@ -7,7 +9,7 @@ html {
 body {
 	min-width: 320px;
 	height: 100%;
-	font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+	font-family: 'Dosis', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
 	color: white;
 	font-size: 2rem;
 	padding: 0;
@@ -23,9 +25,9 @@ header {
 	bottom: 0px;
 	display: block;
 	width: 100%;
-	border-top: 2px solid white;
+	border-top: 4px solid white;
 	height: 5rem;
-	line-height: 5rem;
+	line-height: 4.5rem;
 	padding-left: 1rem;
 	z-index: -1;
 }
@@ -47,6 +49,7 @@ header {
 	margin-left: -2.5rem;
 	position: absolute;
 	bottom: 0%;
+	display: none;
 }
 
 .warning {
