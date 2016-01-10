@@ -41,8 +41,8 @@ if ( navigator.vibrate ) {
 } else {
 	//  fade in the no-vibe div
 	console.log( "THIS DOESN'T HAVE A VIBRATOR FUCK YOU" );
-	var elStyle = document.getElementById( 'desktopWarning' ).style;
-	elStyle.display = '';
+	document.getElementById( 'desktopWarning' ).style.display = '';
+	document.getElementById( 'slider' ).style.display = 'none';
 	//  elStyle.opacity = 0;
 
 }
