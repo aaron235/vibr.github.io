@@ -7,10 +7,6 @@ navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mo
 if ( navigator.vibrate ) {
 	//  we're on a good platform!
 
-	//  hide the warning and display the slider:
-	document.getElementById( 'desktopWarning' ).style.display = 'none';
-	document.getElementById( 'slider' ).style.display = '';
-
 	//  intro vibes sequence (tu tu-tuuu!)
 	navigator.vibrate( [250, 100, 100, 70, 500] );
 	

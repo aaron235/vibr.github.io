@@ -50,6 +50,7 @@ header {
 	position: absolute;
 	bottom: 0%;
 	display: none;
+	z-index: 100;
 }
 
 .warning {
